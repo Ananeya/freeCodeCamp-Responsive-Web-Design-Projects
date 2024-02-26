@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 id="title">myAcadamia Survey Form</h1>
+<p id="description">Help us on what we can improve</p>
+<div class="container">
+<form id="survey-form">
+    <div id="text-field">
+    <label id="name-label">Enter Your Name: <input id="name" type="text" placeholder="John Doe" required></label>
+    <label id="email-label">Enter Your Email: <input id="email" type="email" placeholder="johndoe@example.com" required></label>
+    <label id="number-label">Enter Your Age: <input id="number" type="number" placeholder="18" min="13" max="120"></label>
+    </div>
+    <div>
+    <label id="drop-down">what is Your Current Occupation?
+    <select id=dropdown>
+        <option value="">(select one)</option>
+        <option value="1">Student</option>
+        <option value="2">imployed</option>
+        <option value="3">unimployed</option>
+    </select>
+    </label>
+    </div>
+    <div>
+    <p>What kind of account do you have?</p>
+    <label for="free-account"><input id="free-account" type="radio" name="account-type" value="free-account" checked> Free-account </label>
+    <label for="premium-account"><input id="premium-account" type="radio" name="account-type" value="premium-account"> Premium-account </label>
+</div>
+<div>
+    <p>Which part of our curriculum do you want improved</p>
+    <label for="checklist"><input name="prefer" type="checkbox" value="videos"> Course Videos</label>
+    <label for="checklist"><input name="prefer" type="checkbox" value="projects"> Course Projects</label>
+    <label for="checklist"><input name="prefer" type="checkbox" value="materials"> Course Reading Materials</label>
+</div>
+<div>
+    <label for="textarea">Comments or Suggestions<textarea name="comments" type="textarea" placeholder="I like the Videos" rows="5" cols="40"></textarea>
+    </label>
+</div>
+<input id="submit" type="submit">
+</form>
+</div>
+</body>
+</html>
