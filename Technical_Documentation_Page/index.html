@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Documentation Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main-doc">
+    <nav id="navbar">
+    <header>PYTHON Documentation</header>
+    <a href="#introduction" class="nav-link">Introduction</a>
+    <a href="#variables" class="nav-link">Variables</a>
+    <a href="#data-types" class="nav-link">Data Types</a>
+    <a href="#operators" class="nav-link">Operators</a>
+    <a href="#functions" class="nav-link">Functions</a>
+    <a href="#classes" class="nav-link">classes</a>
+    </nav>
+    <section class="main-section" id="introduction">
+    <header>Introduction</header>
+    <p>Python is literally eating the programming world. It is growing in popularity
+and usage in ways that are pretty much unprecedented in the history of
+computers.</p>
+    <p>There is a huge variety of scenarios that Python excels in. Shell scripting,
+task automation, Web development are just some basic examples.</p>
+    <p>Python is the language of choice for data analysis and machine learning,
+but it can also adapt to create games and work with embedded devices.</p>
+    <p>Most importantly, it's the language of choice for introductory computer
+science courses in universities all around the world.</p>
+    <p>Many students learn Python as their first programming language. Many are
+learning it right now, many will learn it in the future. And for many of them,
+Python will be the only programming language they need.</p>
+    <p>Thanks to this unique position, Python is likely going to grow even more in
+the future.
+The language is simple, expressive, and it's quite straightforward.
+The ecosystem is huge. There seems to be a library for everything you can
+imagine.
+Python is a high-level programming language suitable for beginners thanks
+to its intuitive syntax, its huge community and vibrant ecosystem.
+It is also appreciated by professionals across many different fields.
+Technically speaking it is an interpreted language that does not have an
+intermediate compilation phase like a compiled language, for example C or
+Java.</p>
+    <p>And like many interpreted languages, it is dynamically typed, which means
+that you do not have to indicate the types of the variables you use, and
+variables are not tied to a specific type.6
+This has pros and cons. In particular we can mention that you write
+programs faster, but on the other hand you have less help from the tools to
+prevent possible bugs and you will find out about some kinds of issues only
+by executing the program at runtime.</p>
+    <p>Python supports a wide variety of different programming paradigms,
+including procedural programming, object oriented programming and
+functional programming. It's flexible enough to adapt to a lot of different
+needs.
+        Starting with Python is very easy. All you need is to install the official
+package from python.org, for Windows, macOS or Linux, and you're ready to
+go.
+        If you are new to programming, in the following posts I will guide you to go
+from zero to becoming a Python programmer.</p>
+    <p>And even if you are currently a programmer specialized into another
+language, Python is a language worth knowing because I think we're just at
+the start.</p>
+    <p>Lower level languages like C++ and Rust might be great for expert
+programmers, but daunting to begin, and they take a long time to master.
+Python, on the other hand, is a programming language for programmers, of
+course, but also for the non-programmers. The students, the people doing
+their day job with Excel, the scientists.</p>
+    </section>
+    <section class="main-section" id="variables">
+    <header>Variables</header>
+    <p>We can create a new Python variable by assigning a value to a label, using the <code> = </code>
+assignment operator.</p>
+    <p>In this example we assign a string with the value "Roger" to the name label:
+        <code>
+            name = "Roger"
+        </code>
+    </p>
+    <p>Here's an example with a number:
+        <code>
+            age = 8
+        </code>
+    </p>
+    <p>A variable name can be composed by characters, numbers, the _
+underscore character. It can't start with a number. These are all valid
+variable names:
+<code>
+name1
+AGE
+aGE
+a11111
+my_name
+_name
+</code>
+</p>
+    <p>These are invalid variable names:
+        <code>
+            123
+            test!
+            name%
+        </code>
+    </p>
+    <p>Other than that, anything is valid unless it's a Python keyword. There are
+some keywords like for , if , while , import and more.</p>
+    <h2>Expressions and statement</h2>
+    <p>
+        We can expression any sort of code that returns a value. For example
+        <code>
+            1 + 1
+            "Roger"
+        </code>
+    </p>
+    <p>A statement on the other hand is an operation on a value, for example these
+are 2 statements:
+        <code>
+            name = "Roger"
+            print(name)
+        </code>
+    </p>
+    <p>A program is formed by a series of statements. Each statement is put on its
+own line, but you can use a semicolon to have more than one statement on a
+single line:
+        <code>
+            name = "Roger"; print(name)
+        </code>
+</p>
+    <h2>Comment</h2>
+    <p>In a Python program, everything after a hash mark is ignored, and
+considered a comment:
+        <code>
+            #this is a commented line
+            name = "Roger" # this is an inline comment
+        </code>
+</p>
+    <!-- <code>1</code>
+    <code>2</code>
+    <code>3</code>
+    <code>4</code>
+    <code>5</code> -->
+    <!-- <ol>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol> -->
+    </section>
+    <section class="main-section" id="data-types">
+    <header>Data Types</header>
+    <p>Python has several built-in types.</p>
+    <p>If you create the name variable assigning it the value "Roger", automatically
+this variable is now representing a String data type.
+        <code>
+            name = "Roger"
+        </code>
+</p>
+    <p>You can check which type a variable is using the type() function, passing
+the variable as an argument, and then comparing the result to str :
+        <code>
+            name = "Roger"
+            type(name) == str #True
+        </code>
+</p>
+    <p>Or using isinstance() :
+        <code>
+            name = "Roger"
+            isinstance(name, str) #True
+        </code>
+    </p>
+    <p>Notice that to see the True value in Python, outside of a REPL, you
+need to wrap this code inside print() , but for clarity reasons I avoid
+using it</p>
+    <p>We used the str class here, but the same works for other data types.
+First, we have numbers. Integer numbers are represented using the int
+class. Floating point numbers (fractions) are of type float :
+        <code>
+            age = 1
+            type(age) == int #True
+        </code>
+        <code>
+            fraction = 0.1
+            type(fraction) == float #True
+        </code>
+    <p>You saw how to create a type from a value literal, like this:
+        <code>
+            name = "Flavio"
+            age = 20
+        </code>
+    </p>
+</p>
+    <p>Python automatically detects the type from the value type.
+You can also create a variable of a specific type by using the class constructor,
+passing a value literal or a variable name:
+        <code>
+            name = str("Flavio")
+            anotherName = str(name)
+        </code>
+</p>
+    <p>You can also convert from one type to another by using the class constructor.
+Python will try to determine the correct value, for example extracting a
+number from a string:
+        <code>
+            age = int("20")
+            print(age) #20
+            fraction = 0.1
+            intFraction = int(fraction)
+            print(intFraction) #0
+        </code>
+</p>
+    <p>This is called casting. Of course this conversion might not always work
+depending on the value passed. If you write test instead of 20 in the
+above string, you'll get a ValueError: invalid literal for int() with base
+10: 'test' error.</p>
+    <p>Those are just the basics of types. We have a lot more types in Python:
+        <ul>
+            <li><code>complex</code> for complex numbers</li>
+            <li><code>bool</code> for booleans</li>
+            <li><code>list</code> for lists</li>
+            <li><code>tuple</code> for tuples</li>
+            <li><code>range</code> for ranges</li>
+            <li><code>dict</code> for dictionaries</li>
+            <li><code>set</code> for sets</li>
+        </ul>
+    </p>
+    <!-- <code>1</code>
+    <code>2</code>
+    <code>3</code>
+    <code>4</code>
+    <code>5</code>
+    <ol>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol> -->
+    </section>
+    <section class="main-section" id="operators">
+    <header>Operators</header>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <code>1</code>
+    <code>2</code>
+    <code>3</code>
+    <code>4</code>
+    <code>5</code>
+    <ol>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol>
+    </section>
+    <section class="main-section" id="functions">
+    <header>Functions</header>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <code>1</code>
+    <code>2</code>
+    <code>3</code>
+    <code>4</code>
+    <code>5</code>
+    <ol>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol>
+    </section>
+    <section class="main-section" id="classes">
+    <header>Classes</header>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <code>1</code>
+    <code>2</code>
+    <code>3</code>
+    <code>4</code>
+    <code>5</code>
+    <ol>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ol>
+    </section>
+</main>
+</body>
+</html>
