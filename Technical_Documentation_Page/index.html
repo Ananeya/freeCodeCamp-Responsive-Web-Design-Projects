@@ -8,17 +8,20 @@
 </head>
 <body>
 <main id="main-doc">
+    <div class="nav-col"></div>
     <nav id="navbar">
     <header>PYTHON Documentation</header>
-    <a href="#introduction" class="nav-link">Introduction</a>
-    <a href="#variables" class="nav-link">Variables</a>
-    <a href="#data-types" class="nav-link">Data Types</a>
-    <a href="#operators" class="nav-link">Operators</a>
-    <a href="#functions" class="nav-link">Functions</a>
+    <a href="#introduction" class="nav-link">introduction</a>
+    <a href="#variables" class="nav-link">variables</a>
+    <a href="#data_types" class="nav-link">data_Types</a>
+    <a href="#operators" class="nav-link">operators</a>
+    <a href="#functions" class="nav-link">functions</a>
     <a href="#classes" class="nav-link">classes</a>
     </nav>
+    </div>
+    <div class="body-col">
     <section class="main-section" id="introduction">
-    <header>Introduction</header>
+    <header>introduction</header>
     <p>Python is literally eating the programming world. It is growing in popularity
 and usage in ways that are pretty much unprecedented in the history of
 computers.</p>
@@ -68,7 +71,7 @@ course, but also for the non-programmers. The students, the people doing
 their day job with Excel, the scientists.</p>
     </section>
     <section class="main-section" id="variables">
-    <header>Variables</header>
+    <header>variables</header>
     <p>We can create a new Python variable by assigning a value to a label, using the <code> = </code>
 assignment operator.</p>
     <p>In this example we assign a string with the value "Roger" to the name label:
@@ -132,21 +135,9 @@ considered a comment:
             name = "Roger" # this is an inline comment
         </code>
 </p>
-    <!-- <code>1</code>
-    <code>2</code>
-    <code>3</code>
-    <code>4</code>
-    <code>5</code> -->
-    <!-- <ol>
-        <li>5</li>
-        <li>4</li>
-        <li>3</li>
-        <li>2</li>
-        <li>1</li>
-    </ol> -->
     </section>
-    <section class="main-section" id="data-types">
-    <header>Data Types</header>
+    <section class="main-section" id="data_types">
+    <header>data_types</header>
     <p>Python has several built-in types.</p>
     <p>If you create the name variable assigning it the value "Roger", automatically
 this variable is now representing a String data type.
@@ -222,94 +213,346 @@ above string, you'll get a ValueError: invalid literal for int() with base
             <li><code>set</code> for sets</li>
         </ul>
     </p>
-    <!-- <code>1</code>
-    <code>2</code>
-    <code>3</code>
-    <code>4</code>
-    <code>5</code>
-    <ol>
-        <li>5</li>
-        <li>4</li>
-        <li>3</li>
-        <li>2</li>
-        <li>1</li>
-    </ol> -->
     </section>
     <section class="main-section" id="operators">
-    <header>Operators</header>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-    <p>6</p>
-    <p>7</p>
-    <p>8</p>
-    <p>9</p>
-    <p>10</p>
-    <code>1</code>
-    <code>2</code>
-    <code>3</code>
-    <code>4</code>
-    <code>5</code>
-    <ol>
-        <li>5</li>
-        <li>4</li>
-        <li>3</li>
-        <li>2</li>
-        <li>1</li>
-    </ol>
+    <header>operators</header>
+    <p>Python operators are symbols that we use to run operations upon values and
+variables.
+We can divide operators based on the kind of operation they perform:
+        <ul>
+            <li>assignment operator</li>
+            <li>arithmetic operators</li>
+            <li>comparison operators</li>
+            <li>logical operators</li>
+            <li>bitwise operators</li>
+        </ul>
+</p>
+    <h2>Assignment operator</h2>
+    <p>The assignment operator is used to assign a value to a variable:
+        <code>
+            age = 8
+        </code>
+    <p>Or to assign a variable value to another variable:
+        <code>
+            age = 8
+            anotherVariable = age
+        </code>
+    </p>
+    </p>
+    <h2>Arithmetic operator</h2>
+    <p>Python has a number of arithmetic operators: + , - , * , / (division), %
+(remainder), ** (exponentiation) and // (floor division):
+        <code>
+            1 + 1 #2,
+            2 - 1 #1,
+            2 * 2 #4,
+            4 / 2 #2,
+            4 % 3 #1,
+            4 ** 2 #16,
+            4 // 2 #2
+        </code>
+</p>
+    <h2>Comparison operator</h2>
+    <p>Python defines a few comparison operators:
+        <ul>
+            <li>==</li>
+            <li>!=</li>
+            <li>&lt;</li>
+            <li>&gt;</li>
+            <li>>=</li>
+            <li>&lt;=</li>
+        </ul>
+    <p>You can use those operators to get a boolean value ( True or False )
+depending on the result:
+        <code>
+            a = 1,
+            b = 2,
+            a == b #False,
+            a != b #True,
+            a > b #False,
+            a <= b #True
+        </code>
+</p>
+    </p>
+    <h2>Boolean operator</h2>
+    <p>Python gives us the following boolean operators:
+        <ul>
+            <li>not</li>
+            <li>and</li>
+            <li>or</li>
+        </ul>
+    </p>
+    <p>When working with True or False attributes, those work like logical AND,
+OR and NOT, and are often used in the if conditional expression
+evaluation:
+        <code>
+            condition1 = True,
+            condition2 = False,
+            not condition1 #False,
+            condition1 and condition2 #False,
+            condition1 or condition2 #True
+        </code>
+    <p><code>or</code> used in an expression returns the value of the first operand that is not a
+falsy value ( False , 0 , '' , [] ..). Otherwise it returns the last operand.
+        <code>
+            print(0 or 1) ### 1,
+            print(False or 'hey') ### 'hey',
+            print('hi' or 'hey') ### 'hi',
+            print([] or False) ### False,
+            print(False or []) ### []
+        </code>
+    <p>The Python docs describe it as if x is false, then y, else x .
+and only evaluates the second argument if the first one is true. So if the first
+argument is falsy ( False , 0 , '' , [] ..), it returns that argument.
+Otherwise it evaluates the second argument:
+        <code>
+            print(0 and 1) ### 0,
+            print(1 and 0) ### 0,
+            print(False and 'hey') ### False,
+            print('hi' and 'hey') ### 'hey',
+            print([] and False ) ### [],
+            print(False and [] ) ### False,
+        </code>
+    <p>The Python docs describe it as if x is false, then x, else y .</p>
+</p>
+</p>
+</p>
+    <h2>Bitwise operator</h2>
+    <p>Some operators are used to work on bits and binary numbers:
+        <ul>
+            <li><code> & </code>performs binary AND</li>
+            <li><code> | </code>performs binary OR</li>
+            <li><code> ^ </code>performs a binary XOR operation</li>
+            <li><code> ~ </code>performs a binary NOT operation</li>
+            <li><code> << </code>shift left operation</li>
+            <li><code> >> </code>shift right operation</li>
+        </ul>
+    </p>
+    <h3><code>is</code> and <code>in</code></h3>
+    <p><code>is</code> is called the <b>identity operator</b>. It is used to compare two objects and
+returns true if both are the same object. More on objects later.</p>
+    <p><code>in</code> is called the <b>membership operator</b>. Is used to tell if a value is
+contained in a list, or another sequence. More on lists and other sequences
+later.</p>
+    <h2>The Ternary Operator</h2>
+    <p>The ternary operator in Python allows you to quickly define a conditional.
+Let's say you have a function that compares an age variable to the 18
+value, and return True or False depending on the result.
+Instead of writing:
+        <code>
+            def is_adult(age):
+            if age > 18:
+            return True
+            else:
+            return False
+        </code>
+</p>
+    <p>You can implement it with the ternary operator in this way:
+        <code>
+            def is_adult(age):
+            return True if age > 18 else False
+        </code>
+    <p>First you define the result if the condition is True, then you evaluate the
+condition, then you define the result if the condition is false:
+        <code>
+            <result_if_true> if <condition> else <result_if_false></result_if_false>
+        </code>
+</p>
+    </p>
     </section>
     <section class="main-section" id="functions">
-    <header>Functions</header>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-    <p>6</p>
-    <p>7</p>
-    <p>8</p>
-    <p>9</p>
-    <p>10</p>
-    <code>1</code>
-    <code>2</code>
-    <code>3</code>
-    <code>4</code>
-    <code>5</code>
-    <ol>
-        <li>5</li>
-        <li>4</li>
-        <li>3</li>
-        <li>2</li>
-        <li>1</li>
-    </ol>
+    <header>functions</header>
+    <p>A function lets us create a set of instructions that we can run when needed.
+Functions are essential in Python and in many other programming languages
+to create meaningful programs, because they allow us to decompose a
+program into manageable parts, they promote readability and code reuse.
+Here is an example function called hello that prints "Hello!":
+        <code>
+            def hello():
+            print('Hello!')
+        </code>
+</p>
+    <p>This is the function definition. There is a name ( hello ) and a body, the set
+of instructions, which is the part that follows the colon and it's indented one
+level on the right.
+To run this function, we must call it. This is the syntax to call the function:
+        <code>
+            hello()
+        </code>
+</p>
+    <p>We can execute this function once, or multiple times.
+The name of the function, hello , is very important. It should be descriptive,
+so anyone calling it can imagine what the function does.
+        <code>
+            def hello(name):
+            print('Hello ' + name + '!')
+        </code>
+</p>
+    <p>In this case we call the function passing the argument
+        <code>
+            hello('Roger')
+        </code>
+    <p>We call parameters the values accepted by the function inside the
+function definition, and arguments the values we pass to the function
+when we call it. It's common to get confused about this distinction.</p>
+    </p>
+    <p>An argument can have a default value that's applied if the argument is not
+specified:
+        <code>
+            def hello(name='my friend'):
+            print('Hello ' + name + '!')
+            hello()
+            #Hello my friend!
+        </code>
+    <p>Here's how we can accept multiple parameters:
+        <code>
+            def hello(name, age):
+            print('Hello ' + name + ', you are ' + str(age) + ' years old!')
+        </code>
+    <p>In this case we call the function passing a set of arguments:
+        <code>
+            hello('Roger', 8)
+        </code>
+    </p>
+    </p>
+</p>
+    <p>Parameters are passed by reference. All types in Python are objects but some
+of them are immutable, including integers, booleans, floats, strings, and
+tuples. This means that if you pass them as parameters and you modify their
+value inside the function, the new value is not reflected outside of the
+function:
+        <code>
+            def change(value):
+            value = 2
+            val = 1
+            change(val)
+            print(val) #1
+        </code>
+</p>
+    <p>If you pass an object that's not immutable, and you change one of its
+properties, the change will be reflected outside.
+A function can return a value, using the return statement. For example in
+this case we return the name parameter name:
+        <code>
+            def hello(name):
+            print('Hello ' + name + '!')
+            return name
+        </code>
+</p>
+    <p>When the function meets the return statement, the function ends.
+We can omit the value:
+        <code>
+            def hello(name):
+            print('Hello ' + name + '!')
+            return
+        </code>
+</p>
+    <p>We can have the return statement inside a conditional, which is a common
+way to end a function if a starting condition is not met:
+        <code>
+            def hello(name):
+            if not name:
+            return
+            print('Hello ' + name + '!')
+        </code>
+</p>
+    <p>If we call the function passing a value that evaluates to False , like an empty
+string, the function is terminated before reaching the print() statement.
+You can return multiple values by using comma separated values:
+        <code>
+            def hello(name):
+            print('Hello ' + name + '!')
+            return name, 'Roger', 8
+        </code>
+    <p>In this case calling hello('Syd') the return value is a tuple containing those
+3 values: ('Syd', 'Roger', 8) .</p>
+</p>
     </section>
     <section class="main-section" id="classes">
-    <header>Classes</header>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-    <p>6</p>
-    <p>7</p>
-    <p>8</p>
-    <p>9</p>
-    <p>10</p>
-    <code>1</code>
-    <code>2</code>
-    <code>3</code>
-    <code>4</code>
-    <code>5</code>
-    <ol>
-        <li>5</li>
-        <li>4</li>
-        <li>3</li>
-        <li>2</li>
-        <li>1</li>
-    </ol>
+    <header>classes</header>
+    <p>In addition to using the Python-provided types, we can declare our own
+classes, and from classes we can instantiate objects.
+An object is an instance of a class. A class is the type of an object.</p>
+    <p>Define a class in this way:
+        <code>
+            class <class_name>:
+            # my class
+        </code>
+    </p>
+    <p>For example let's define a Dog class
+        <code>
+            class Dog:
+            # the Dog class
+        </code>
+    </p>
+    <p>A class can define methods:
+        <code>
+            class Dog:
+            # the Dog class
+            def bark(self):
+            print('WOF!')
+        </code>
+    <p><code>self</code> as the argument of the method points to the current object
+instance, and must be specified when defining a method.</p>
+    </p>
+    <p>We create an instance of a class, an object, using this syntax:
+        <code>
+            roger = Dog()
+        </code>
+    <p>Now roger is a new object of type Dog.</p>
+    </p>
+    <p>If you run
+        <code>
+            print(type(roger))
+        </code>
+    <p>You will get class '__main__.Dog'</class></p>
+    </p>
+    <p>A special type of method, __init__() is called constructor, and we can use it
+to initialize one or more properties when we create a new object from that
+class:
+        <code>
+            class Dog:
+            # the Dog class
+            def __init__(self, name, age):
+            self.name = name
+            self.age = age
+            def bark(self):
+            print('WOF!')
+        </code>
+</p>
+    <p>We use it in this way:
+        <code>
+            roger = Dog('Roger', 8)
+            print(roger.name) # 'Roger'
+            print(roger.age) # 8
+            roger.bark() # 'WOF!'
+        </code>
+    <p>One important features of classes is inheritance.</p>
+    </p>
+    <p>We can create an Animal class with a method walk() :
+        <code>
+            class Animal:
+            def walk(self):
+            print('Walking..')
+        </code>
+    <p>and the Dog class can inherit from Animal:
+        <code>
+            class Dog(Animal):
+            def bark(self):
+            print('WOF!')
+        </code>
+    </p>
+    </p>
+    <p>Now creating a new object of class Dog will have the walk() method as
+that's inherited from Animal :
+        <code>
+            roger = Dog()
+            roger.walk() # 'Walking..'
+            roger.bark() # 'WOF!'
+        </code>
+</p>
     </section>
+    </div>
 </main>
 </body>
 </html>
