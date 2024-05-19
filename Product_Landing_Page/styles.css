@@ -1,0 +1,161 @@
+/* Global Styles */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    padding: 0.5rem;
+}
+
+/* End of Global Styles */
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: hsl(211, 27%, 70%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.header {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+
+#header-img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+.nav-link {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 728px) {
+    ul {
+        display: flex;
+        /* border: 1px solid red; */
+        padding-right: 2rem;
+    }
+    li {
+        padding-left: 1rem;
+    }
+    .header {
+        flex-direction: row;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+    } 
+    #header-img {
+        padding: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    .nav-link {
+        font-size: 1.5rem;
+    }
+}
+
+#main {
+    padding-top: 20rem;
+    max-width: 992px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home-img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 2%;
+}
+
+h1 {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+p {
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 728px) {
+    #main {
+        padding-top: 6rem;
+    }
+}
+
+#video {
+    border-radius: 2%;
+}
+
+#form {
+    text-align: left;
+}
+
+#footer {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+#footer {
+    width: 100%;
+    background: hsl(211, 27%, 70%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-link, #copyright {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.center {
+    display: flex;
+    padding-top: 1rem;
+}
+
+#copyright {
+    padding-right: 6rem;
+}
+
+#form {
+    padding: 2rem;
+}
+
+input {
+    width: 24rem;
+    height: 2rem;
+}
+
+label {
+    padding-bottom: 0.5rem;
+}
+
+
